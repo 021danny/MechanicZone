@@ -1,0 +1,69 @@
+@font-face {
+    font-family: irancell;
+    src: url(../fonts/Irancell2.ttf);
+}
+
+*,body {
+    font-family: irancell;
+    direction: rtl;
+
+       
+    
+}
+
+
+
+.row {
+    margin-top: 10px;
+    background-color: rgba(246, 246, 246, 0.792);
+    border-radius: 10px;
+    
+}
+
+.col {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 2px;
+}
+
+#about {
+    margin-top: 50px;
+    text-align: justify;
+    line-height: 2.5;
+    padding: 20px;
+}
+
+.col1 {
+    background-color: rgb(208, 208, 208);
+}
+
+.col2 {
+    background-color: blanchedalmond;
+}
+
+.col3 {
+    background-color: rgb(252, 191, 100);
+}
+
+.col4 {
+    background-color: rgb(254, 82, 133);
+}
+
+
+.btn-show {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    width: 100%;
+}
+
+
+#myimg {
+    border-radius: 100px;
+    height: 450px;
+}
+
+
+
+
+
