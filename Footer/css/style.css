@@ -1,8 +1,4 @@
 /* Optional: فونت فارسی (اگر خواستی می‌تونی IRANSans / Vazirmatn بذاری) */
-@font-face {
-  font-family: "Vazirmatn";
-  src: local("Vazirmatn");
-}
 
 :root{
   --bg: #1f1f1f;
@@ -13,6 +9,7 @@
   --bar: #7a130b;       /* نوار پایین */
   --radius: 6px;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
+  
 }
 
 *{ box-sizing: border-box; }
@@ -32,6 +29,7 @@ body{
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
+  
 }
 
 /* Inner layout */
@@ -47,24 +45,28 @@ body{
 .footer-brand{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 18px;
+  align-items: flex-start; /* یا center اگر خواستی وسط باشد */
+  gap: 14px;
   padding-top: 6px;
 }
 .brand-link{
   display: inline-flex;
   text-decoration: none;
 }
-.brand-logo{
-  width: 170px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.4));
-}
+.brand-logo,
 .brand-sublogo{
-  width: 110px;
+  display: block;     /* مهم: inline نباشد */
+  width: 100%;        /* هر دو دقیقاً عرض یکسان می‌گیرند */
   height: auto;
-  opacity: .95;
+  object-fit: contain;
+}
+
+.logo-stack{
+  width: 100px;          /* این عدد را با توجه به لوگوت تنظیم کن */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* برای هم‌راستایی از یک سمت */
+  gap: 14px;
 }
 
 /* Columns wrapper */
@@ -82,6 +84,7 @@ body{
   font-weight: 800;
   color: var(--title);
   letter-spacing: .2px;
+   font-family: "vazir-black", sans-serif;
 }
 
 .footer-links{
@@ -90,6 +93,7 @@ body{
   margin: 0;
   display: grid;
   gap: 10px;
+  
 }
 
 .footer-links a{
@@ -100,6 +104,7 @@ body{
   opacity: .95;
   transition: transform .15s ease, opacity .15s ease, color .15s ease;
   display: inline-block;
+  
 }
 
 .footer-links a:hover{
@@ -119,6 +124,9 @@ body{
   font-size: 13px;
   letter-spacing: .2px;
 }
+
+
+
 
 /* Responsive */
 @media (max-width: 900px){
